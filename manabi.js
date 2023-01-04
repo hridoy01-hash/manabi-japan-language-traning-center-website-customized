@@ -6,17 +6,26 @@ window.onload = (event) => {
         s0000_header_col_middle_section_id.appendChild(headernavMenuWrapper);
         const navUl = elementMaker('ul', ["navul_wrapper"]);
         headernavMenuWrapper.appendChild(navUl);
-        const NavListItem1 = elementMaker("li", ["nav_list_item"]);
+        const NavListItem1 = elementMaker("li", ["nav_list_item"], "home_btn_id");
         NavListItem1.innerText = `Home`;
         navUl.appendChild(NavListItem1);
+        NavListItem1.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/")
+        });
 
-        const NavListItem2 = elementMaker("li", ["nav_list_item"]);
+        const NavListItem2 = elementMaker("li", ["nav_list_item"], "about_btn_id");
         NavListItem2.innerText = `About Us`;
         navUl.appendChild(NavListItem2);
+        NavListItem2.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/page/about");
+        });
 
-        const NavListItem3 = elementMaker("li", ["nav_list_item"]);
+        const NavListItem3 = elementMaker("li", ["nav_list_item"], "contact_btn_id");
         NavListItem3.innerText = `Contact`;
         navUl.appendChild(NavListItem3);
+        NavListItem3.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/page/contact");
+        });
 
         const NavListItem4 = elementMaker("li", ["nav_list_item", "traning_option_style_class"]);
         NavListItem4.innerText = `Traning`;
@@ -26,43 +35,61 @@ window.onload = (event) => {
         NavListItem5.innerText = `Country`;
         navUl.appendChild(NavListItem5);
 
-        const NavListItem6 = elementMaker("li", ["nav_list_item"]);
+        const NavListItem6 = elementMaker("li", ["nav_list_item"], "blog_btn_id");
         NavListItem6.innerText = `Blog`;
         navUl.appendChild(NavListItem6);
+        NavListItem6.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/page/blog");
+        });
 
         const NavListItem7 = elementMaker("li", ["nav_list_item", "Online_application_btn"], "Online_application_btn_id");
         NavListItem7.innerText = `Apply Online`;
         navUl.appendChild(NavListItem7);
+        NavListItem7.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/page/apply");
+        });
 
 
         // sub item for traning
         const sub_Ul_Item_Wrapper = elementMaker("ul", ["sub_Ul_Item_Wrapper"]);
         NavListItem4.appendChild(sub_Ul_Item_Wrapper);
 
-        const subList_Traning_student = elementMaker("li", ["nav_list_item"]);
+        const subList_Traning_student = elementMaker("li", ["nav_list_item"], "for_student_btn_id");
         subList_Traning_student.innerText = `For Student`;
         sub_Ul_Item_Wrapper.appendChild(subList_Traning_student);
+        subList_Traning_student.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/page/students");
+        });
 
-        const subList_Traning_job = elementMaker("li", ["nav_list_item"]);
+        const subList_Traning_job = elementMaker("li", ["nav_list_item"], "for_job_btn_id");
         subList_Traning_job.innerText = `For Job`;
         sub_Ul_Item_Wrapper.appendChild(subList_Traning_job);
+        subList_Traning_job.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/page/job");
+        });
 
         // sub item for country
         const sub_Ul_Item_Wrapper2 = elementMaker("ul", ["sub_Ul_Item_Wrapper"]);
         NavListItem5.appendChild(sub_Ul_Item_Wrapper2);
 
-        const Country1 = elementMaker("li", ["nav_list_item"]);
+        const Country1 = elementMaker("li", ["nav_list_item"], "japan_btn_id");
         Country1.innerText = `Japan`;
         sub_Ul_Item_Wrapper2.appendChild(Country1);
+        Country1.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/page/japan");
+        });
 
 
         const s0000_ecommerce_menu_wrapper = document.querySelector(".s0000_ecommerce_menu_wrapper");
-       
+
         const Mobile_device_homeBtn = elementMaker("li", ["mobile_device_home_btn"]);
         Mobile_device_homeBtn.innerHTML = `
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.988" viewBox="0 0 20 19.988"> <path id="Home" d="M.732,7.561,7.053,1.239a4.173,4.173,0,0,1,5.893,0l6.321,6.322A2.482,2.482,0,0,1,20,9.329v8.181a2.5,2.5,0,0,1-2.5,2.5H2.5a2.5,2.5,0,0,1-2.5-2.5V9.329A2.482,2.482,0,0,1,.732,7.561ZM7.5,18.343h5V15.064a2.5,2.5,0,1,0-5,0Zm-5.833-.833a.833.833,0,0,0,.833.833H5.833V15.064a4.167,4.167,0,0,1,8.333,0v3.278H17.5a.833.833,0,0,0,.833-.833V9.329a.84.84,0,0,0-.244-.589L11.768,2.42a2.507,2.507,0,0,0-3.537,0L1.911,8.742a.84.84,0,0,0-.244.587Z" transform="translate(0 -0.021)" fill="#1e272e"></path> </svg>
         `;
         s0000_ecommerce_menu_wrapper.appendChild(Mobile_device_homeBtn);
+        Mobile_device_homeBtn.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/");
+        });
 
         const Mobile_device_ApplyBtn = elementMaker("li", ["mobile_device_apply_btn"]);
         Mobile_device_ApplyBtn.innerHTML = `
@@ -127,6 +154,11 @@ l7 235 134 208 c82 126 134 217 134 232 0 60 -86 91 -127 47 -12 -13 -64 -90
 </svg>
         `;
         s0000_ecommerce_menu_wrapper.appendChild(Mobile_device_ApplyBtn);
+        Mobile_device_ApplyBtn.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/page/apply");
+        });
+
+
 
         function elementMaker(name, className, id) {
             try {

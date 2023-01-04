@@ -2,6 +2,10 @@
     display: none;
 }
 
+#s0000_header_col_bottom_section_id {
+    display: none !important;
+}
+
 .navul_wrapper {
     align-items: center;
     justify-content: center;
@@ -77,7 +81,8 @@
     width: 19px !important;
     height: 15px !important;
 }
-.cx_1631613320907_footer_body{
+
+.cx_1631613320907_footer_body {
     display: none !important;
 }
 
