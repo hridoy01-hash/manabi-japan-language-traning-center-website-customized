@@ -1,0 +1,88 @@
+#s0000_header_col_right_section_id {
+    display: none;
+}
+
+.navul_wrapper {
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    display: none;
+}
+
+.nav_list_item {
+    position: relative;
+    cursor: pointer;
+}
+
+.traning_option_style_class {
+    line-height: 46px;
+}
+
+.country_option_style_class {
+    line-height: 46px;
+}
+
+.sub_Ul_Item_Wrapper {
+    position: absolute;
+    flex-direction: column;
+    list-style: none;
+    width: 100px;
+    padding-top: 10px;
+    display: none;
+    z-index: 20;
+}
+
+.nav_list_item:hover .sub_Ul_Item_Wrapper {
+    display: flex;
+    background-color: white;
+    border: 1px solid green;
+    width: 160px;
+    padding: 13px;
+}
+
+#Online_application_btn_id {
+    background-color: #4D99BA;
+    padding: 9px 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s linear;
+}
+
+#Online_application_btn_id:hover {
+    background-color: green;
+}
+
+.s0000_view_all_category_btn_wrapper {
+    display: none !important;
+}
+
+.s0000_main_nav {
+    margin-top: 0px !important;
+}
+
+.s0000_category_nav {
+    margin-top: 0px !important;
+}
+
+.mobile_device_apply_btn svg {
+    height: 35px !important;
+    width: 42px !important;
+    display: flex;
+    align-items: center;
+}
+
+.s0000_ecommerce_menu_icon .s0000_hamburger_icon svg {
+    width: 19px !important;
+    height: 15px !important;
+}
+.cx_1631613320907_footer_body{
+    display: none !important;
+}
+
+@media screen and (min-width:1368px) {
+    .navul_wrapper {
+        display: flex;
+    }
+}
